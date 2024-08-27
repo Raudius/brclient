@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                     // Output ES6 compatible JS
+    "module": "ES6",                     // Use ES6 module system
+    "declaration": true,                 // Generates .d.ts declaration files
+    "outDir": "./dist",                  // Where the output files go
+    "strict": true,                      // Enables all strict type checks
+    "esModuleInterop": true,             // Allows compatibility with CommonJS and ES Modules
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts"],            // Where your TypeScript files are located
+  "exclude": ["node_modules"]            // Exclude node_modules
+}

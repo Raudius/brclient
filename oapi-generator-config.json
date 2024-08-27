@@ -1,0 +1,5 @@
+{
+  "usePromises": true,
+  "useSingleRequestParameter": true,
+  "exclude": [".openapi-generator", "git-push.sh"]
+}
