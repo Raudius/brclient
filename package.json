@@ -6,10 +6,9 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prebuild": "npx openapi-generator-cli generate -g typescript-axios -i schema.json --skip-validate-spec -o ./src/client/ -c oapi-generator-config.json",
+    "generate": "npx openapi-generator-cli generate -g typescript-axios -i schema.json --skip-validate-spec -o ./src/client/ -c oapi-generator-config.json",
     "build": "rollup -c",
-    "prepublishOnly": "npm run build",
-    "postinstall": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "exports": {
     ".": {
