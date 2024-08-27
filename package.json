@@ -5,11 +5,18 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
   "scripts": {
-    "preinstall": "npx openapi-generator-cli generate -g typescript-axios -i schema.json --skip-validate-spec -o ./src/client/ -c oapi-generator-config.json",
-    "prepare": "npm run build",
-    "build": "rollup -c"
+    "prebuild": "npx openapi-generator-cli generate -g typescript-axios -i schema.json --skip-validate-spec -o ./src/client/ -c oapi-generator-config.json",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "postinstall": "npm run build"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./package.json": "./package.json"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,4 @@
-./.idea/
+.idea/
 **/.openapi-generator/
 src/client/*.ts
 node_modules/
